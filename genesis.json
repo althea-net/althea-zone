@@ -18,11 +18,22 @@
   },
   "app_hash": "",
   "app_state": {
-    "crisis": {
-      "constant_fee": {
-        "denom": "altg",
-        "amount": "1333000000"
-      }
+    "distr": {
+      "fee_pool": {
+        "community_pool": []
+      },
+      "community_tax": "0.020000000000000000",
+      "base_proposer_reward": "0.010000000000000000",
+      "bonus_proposer_reward": "0.040000000000000000",
+      "withdraw_addr_enabled": false,
+      "delegator_withdraw_infos": [],
+      "previous_proposer": "",
+      "outstanding_rewards": [],
+      "validator_accumulated_commissions": [],
+      "validator_historical_rewards": [],
+      "validator_current_rewards": [],
+      "delegator_starting_infos": [],
+      "validator_slash_events": []
     },
     "slashing": {
       "params": {
@@ -35,38 +46,6 @@
       },
       "signing_infos": {},
       "missed_blocks": {}
-    },
-    "auth": {
-      "collected_fees": [],
-      "params": {
-        "max_memo_characters": "512",
-        "tx_sig_limit": "7",
-        "tx_size_cost_per_byte": "10",
-        "sig_verify_cost_ed25519": "590",
-        "sig_verify_cost_secp256k1": "1000"
-      }
-    },
-    "staking": {
-      "pool": {
-        "not_bonded_tokens": "0",
-        "bonded_tokens": "0"
-      },
-      "params": {
-        "unbonding_time": "1814400000000000",
-        "max_validators": 100,
-        "max_entries": 7,
-        "bond_denom": "altg"
-      },
-      "last_total_power": "0",
-      "last_validator_powers": null,
-      "validators": null,
-      "delegations": null,
-      "unbonding_delegations": null,
-      "redelegations": null,
-      "exported": false
-    },
-    "bank": {
-      "send_enabled": false
     },
     "gov": {
       "starting_proposal_id": "1",
@@ -91,9 +70,6 @@
         "veto": "0.334000000000000000"
       }
     },
-    "genutil": {
-      "gentxs": null
-    },
     "mint": {
       "minter": {
         "inflation": "0.070000000000000000",
@@ -107,23 +83,6 @@
         "goal_bonded": "0.670000000000000000",
         "blocks_per_year": "4855015"
       }
-    },
-    "distr": {
-      "fee_pool": {
-        "community_pool": []
-      },
-      "community_tax": "0.020000000000000000",
-      "base_proposer_reward": "0.010000000000000000",
-      "bonus_proposer_reward": "0.040000000000000000",
-      "withdraw_addr_enabled": false,
-      "delegator_withdraw_infos": [],
-      "previous_proposer": "",
-      "outstanding_rewards": [],
-      "validator_accumulated_commissions": [],
-      "validator_historical_rewards": [],
-      "validator_current_rewards": [],
-      "delegator_starting_infos": [],
-      "validator_slash_events": []
     },
     "accounts": [
       {
@@ -167,6 +126,138 @@
         "end_time": "0"
       }
     ],
-    "params": null
+    "staking": {
+      "pool": {
+        "not_bonded_tokens": "0",
+        "bonded_tokens": "0"
+      },
+      "params": {
+        "unbonding_time": "1814400000000000",
+        "max_validators": 100,
+        "max_entries": 7,
+        "bond_denom": "altg"
+      },
+      "last_total_power": "0",
+      "last_validator_powers": null,
+      "validators": null,
+      "delegations": null,
+      "unbonding_delegations": null,
+      "redelegations": null,
+      "exported": false
+    },
+    "genutil": {
+      "gentxs": [
+        {
+          "type": "auth/StdTx",
+          "value": {
+            "msg": [
+              {
+                "type": "cosmos-sdk/MsgCreateValidator",
+                "value": {
+                  "description": {
+                    "moniker": "justin-validator",
+                    "identity": "",
+                    "website": "",
+                    "details": ""
+                  },
+                  "commission": {
+                    "rate": "0.100000000000000000",
+                    "max_rate": "0.200000000000000000",
+                    "max_change_rate": "0.010000000000000000"
+                  },
+                  "min_self_delegation": "1",
+                  "delegator_address": "cosmos1jcjxgyzewjnv05tveud5h3fm5dphytt5y8g0ua",
+                  "validator_address": "cosmosvaloper1jcjxgyzewjnv05tveud5h3fm5dphytt5pnu6sw",
+                  "pubkey": "cosmosvalconspub1zcjduepqeetzcwa35hrmf7u2vyrfax45zhn0dws8vmgfhkn3vwfr39ryw24s7l9t9r",
+                  "value": {
+                    "denom": "altg",
+                    "amount": "500000000"
+                  }
+                }
+              }
+            ],
+            "fee": {
+              "amount": [],
+              "gas": "200000"
+            },
+            "signatures": [
+              {
+                "pub_key": {
+                  "type": "tendermint/PubKeySecp256k1",
+                  "value": "A76Btp+xKxkCojkKgOvwx2z9p80t9AU5yqM1qXisSDDc"
+                },
+                "signature": "cViJVVptz29nnf4minFUAQ6KwPOmg+0RU0fi53QtDpUYvIuOg/G1J/22/H+y3DvV9rGPXNO2DBlE65jtl4/B1g=="
+              }
+            ],
+            "memo": "20d682e14b3bb1f8dbdb0492ea5f401c0c088163@kilpatrickjustin.me:26656"
+          }
+        },
+        {
+          "type": "auth/StdTx",
+          "value": {
+            "msg": [
+              {
+                "type": "cosmos-sdk/MsgCreateValidator",
+                "value": {
+                  "description": {
+                    "moniker": "validator1",
+                    "identity": "",
+                    "website": "",
+                    "details": ""
+                  },
+                  "commission": {
+                    "rate": "0.100000000000000000",
+                    "max_rate": "0.200000000000000000",
+                    "max_change_rate": "0.010000000000000000"
+                  },
+                  "min_self_delegation": "1",
+                  "delegator_address": "cosmos1m4jwlltm6swplvgm08twgs5a25khgs9gyyruav",
+                  "validator_address": "cosmosvaloper1m4jwlltm6swplvgm08twgs5a25khgs9gpshf3l",
+                  "pubkey": "cosmosvalconspub1zcjduepq8nq7dsqydyaj8hwq7r8e9k0thvesgn609cwjxmd0vkk46svp7q5qhlllzn",
+                  "value": {
+                    "denom": "altg",
+                    "amount": "500000000"
+                  }
+                }
+              }
+            ],
+            "fee": {
+              "amount": [],
+              "gas": "200000"
+            },
+            "signatures": [
+              {
+                "pub_key": {
+                  "type": "tendermint/PubKeySecp256k1",
+                  "value": "A9t7fRhrovP0jcCl/zi/gjHwIKkdHLFfN2qEFgSrCoDP"
+                },
+                "signature": "l7ujgjED/1Fdv4HPAXqSeUl/d/ApGPGQayErGfEebEVwlNBk1+zdZHjyeL2Vt5u1vYtoMJslXklrwdPsYI6dMA=="
+              }
+            ],
+            "memo": "3c43f4c6abc43c82aeeab338f13e7a56d8451486@159.65.74.76:26656"
+          }
+        }
+      ]
+    },
+    "bank": {
+      "send_enabled": false
+    },
+    "auth": {
+      "collected_fees": [],
+      "params": {
+        "max_memo_characters": "512",
+        "tx_sig_limit": "7",
+        "tx_size_cost_per_byte": "10",
+        "sig_verify_cost_ed25519": "590",
+        "sig_verify_cost_secp256k1": "1000"
+      }
+    },
+    "params": null,
+    "crisis": {
+      "constant_fee": {
+        "denom": "altg",
+        "amount": "1333000000"
+      }
+    }
   }
 }
