@@ -18,29 +18,12 @@
   },
   "app_hash": "",
   "app_state": {
-    "accounts": [
-      {
-        "address": "cosmos1m4jwlltm6swplvgm08twgs5a25khgs9gyyruav",
-        "coins": [
-          {
-            "denom": "altg",
-            "amount": "1000000000"
-          },
-          {
-            "denom": "dollar",
-            "amount": "1000000000"
-          }
-        ],
-        "sequence_number": "0",
-        "account_number": "0",
-        "original_vesting": [],
-        "delegated_free": [],
-        "delegated_vesting": [],
-        "start_time": "0",
-        "end_time": "0"
+    "crisis": {
+      "constant_fee": {
+        "denom": "altg",
+        "amount": "1333000000"
       }
-    ],
-    "params": null,
+    },
     "slashing": {
       "params": {
         "downtime_jail_duration": "600000000000",
@@ -52,12 +35,6 @@
       },
       "signing_infos": {},
       "missed_blocks": {}
-    },
-    "crisis": {
-      "constant_fee": {
-        "denom": "altg",
-        "amount": "1333000000"
-      }
     },
     "auth": {
       "collected_fees": [],
@@ -91,9 +68,6 @@
     "bank": {
       "send_enabled": false
     },
-    "genutil": {
-      "gentxs": null
-    },
     "gov": {
       "starting_proposal_id": "1",
       "deposits": null,
@@ -116,6 +90,9 @@
         "threshold": "0.500000000000000000",
         "veto": "0.334000000000000000"
       }
+    },
+    "genutil": {
+      "gentxs": null
     },
     "mint": {
       "minter": {
@@ -147,6 +124,49 @@
       "validator_current_rewards": [],
       "delegator_starting_infos": [],
       "validator_slash_events": []
-    }
+    },
+    "accounts": [
+      {
+        "address": "cosmos1m4jwlltm6swplvgm08twgs5a25khgs9gyyruav",
+        "coins": [
+          {
+            "denom": "altg",
+            "amount": "1000000000"
+          },
+          {
+            "denom": "dollar",
+            "amount": "1000000000"
+          }
+        ],
+        "sequence_number": "0",
+        "account_number": "0",
+        "original_vesting": [],
+        "delegated_free": [],
+        "delegated_vesting": [],
+        "start_time": "0",
+        "end_time": "0"
+      },
+      {
+        "address": "cosmos1jcjxgyzewjnv05tveud5h3fm5dphytt5y8g0ua",
+        "coins": [
+          {
+            "denom": "altg",
+            "amount": "1000000000"
+          },
+          {
+            "denom": "dollar",
+            "amount": "1000000000"
+          }
+        ],
+        "sequence_number": "0",
+        "account_number": "0",
+        "original_vesting": [],
+        "delegated_free": [],
+        "delegated_vesting": [],
+        "start_time": "0",
+        "end_time": "0"
+      }
+    ],
+    "params": null
   }
 }
