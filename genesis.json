@@ -1,48 +1,7 @@
 {
   "app_hash": "",
   "app_state": {
-    "accounts": [
-      {
-        "account_number": "0",
-        "address": "cosmos1m4jwlltm6swplvgm08twgs5a25khgs9gyyruav",
-        "coins": [
-          {
-            "amount": "1000000000",
-            "denom": "altg"
-          },
-          {
-            "amount": "1000000000",
-            "denom": "dollar"
-          }
-        ],
-        "delegated_free": [],
-        "delegated_vesting": [],
-        "end_time": "0",
-        "original_vesting": [],
-        "sequence_number": "0",
-        "start_time": "0"
-      },
-      {
-        "account_number": "0",
-        "address": "cosmos1jcjxgyzewjnv05tveud5h3fm5dphytt5y8g0ua",
-        "coins": [
-          {
-            "amount": "1000000000",
-            "denom": "altg"
-          },
-          {
-            "amount": "1000000000",
-            "denom": "dollar"
-          }
-        ],
-        "delegated_free": [],
-        "delegated_vesting": [],
-        "end_time": "0",
-        "original_vesting": [],
-        "sequence_number": "0",
-        "start_time": "0"
-      }
-    ],
+    "accounts": [],
     "auth": {
       "collected_fees": [],
       "params": {
@@ -80,98 +39,7 @@
       "withdraw_addr_enabled": false
     },
     "genutil": {
-      "gentxs": [
-        {
-          "type": "auth/StdTx",
-          "value": {
-            "fee": {
-              "amount": [],
-              "gas": "200000"
-            },
-            "memo": "20d682e14b3bb1f8dbdb0492ea5f401c0c088163@kilpatrickjustin.me:26656",
-            "msg": [
-              {
-                "type": "cosmos-sdk/MsgCreateValidator",
-                "value": {
-                  "commission": {
-                    "max_change_rate": "0.010000000000000000",
-                    "max_rate": "0.200000000000000000",
-                    "rate": "0.100000000000000000"
-                  },
-                  "delegator_address": "cosmos1jcjxgyzewjnv05tveud5h3fm5dphytt5y8g0ua",
-                  "description": {
-                    "details": "",
-                    "identity": "",
-                    "moniker": "justin-validator",
-                    "website": ""
-                  },
-                  "min_self_delegation": "1",
-                  "pubkey": "cosmosvalconspub1zcjduepqeetzcwa35hrmf7u2vyrfax45zhn0dws8vmgfhkn3vwfr39ryw24s7l9t9r",
-                  "validator_address": "cosmosvaloper1jcjxgyzewjnv05tveud5h3fm5dphytt5pnu6sw",
-                  "value": {
-                    "amount": "500000000",
-                    "denom": "altg"
-                  }
-                }
-              }
-            ],
-            "signatures": [
-              {
-                "pub_key": {
-                  "type": "tendermint/PubKeySecp256k1",
-                  "value": "A76Btp+xKxkCojkKgOvwx2z9p80t9AU5yqM1qXisSDDc"
-                },
-                "signature": "cViJVVptz29nnf4minFUAQ6KwPOmg+0RU0fi53QtDpUYvIuOg/G1J/22/H+y3DvV9rGPXNO2DBlE65jtl4/B1g=="
-              }
-            ]
-          }
-        },
-        {
-          "type": "auth/StdTx",
-          "value": {
-            "fee": {
-              "amount": [],
-              "gas": "200000"
-            },
-            "memo": "3c43f4c6abc43c82aeeab338f13e7a56d8451486@159.65.74.76:26656",
-            "msg": [
-              {
-                "type": "cosmos-sdk/MsgCreateValidator",
-                "value": {
-                  "commission": {
-                    "max_change_rate": "0.010000000000000000",
-                    "max_rate": "0.200000000000000000",
-                    "rate": "0.100000000000000000"
-                  },
-                  "delegator_address": "cosmos1m4jwlltm6swplvgm08twgs5a25khgs9gyyruav",
-                  "description": {
-                    "details": "",
-                    "identity": "",
-                    "moniker": "validator1",
-                    "website": ""
-                  },
-                  "min_self_delegation": "1",
-                  "pubkey": "cosmosvalconspub1zcjduepq8nq7dsqydyaj8hwq7r8e9k0thvesgn609cwjxmd0vkk46svp7q5qhlllzn",
-                  "validator_address": "cosmosvaloper1m4jwlltm6swplvgm08twgs5a25khgs9gpshf3l",
-                  "value": {
-                    "amount": "500000000",
-                    "denom": "altg"
-                  }
-                }
-              }
-            ],
-            "signatures": [
-              {
-                "pub_key": {
-                  "type": "tendermint/PubKeySecp256k1",
-                  "value": "A9t7fRhrovP0jcCl/zi/gjHwIKkdHLFfN2qEFgSrCoDP"
-                },
-                "signature": "l7ujgjED/1Fdv4HPAXqSeUl/d/ApGPGQayErGfEebEVwlNBk1+zdZHjyeL2Vt5u1vYtoMJslXklrwdPsYI6dMA=="
-              }
-            ]
-          }
-        }
-      ]
+      "gentxs": null
     },
     "gov": {
       "deposit_params": {
