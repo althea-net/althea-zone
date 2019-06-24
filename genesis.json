@@ -80,7 +80,98 @@
       "withdraw_addr_enabled": false
     },
     "genutil": {
-      "gentxs": null
+      "gentxs": [
+        {
+          "type": "auth/StdTx",
+          "value": {
+            "fee": {
+              "amount": [],
+              "gas": "200000"
+            },
+            "memo": "20d682e14b3bb1f8dbdb0492ea5f401c0c088163@kilpatrickjustin.me:26656",
+            "msg": [
+              {
+                "type": "cosmos-sdk/MsgCreateValidator",
+                "value": {
+                  "commission": {
+                    "max_change_rate": "0.010000000000000000",
+                    "max_rate": "0.200000000000000000",
+                    "rate": "0.100000000000000000"
+                  },
+                  "delegator_address": "cosmos1jcjxgyzewjnv05tveud5h3fm5dphytt5y8g0ua",
+                  "description": {
+                    "details": "",
+                    "identity": "",
+                    "moniker": "testing",
+                    "website": "kilpatrickjustin.me"
+                  },
+                  "min_self_delegation": "1",
+                  "pubkey": "cosmosvalconspub1zcjduepqeetzcwa35hrmf7u2vyrfax45zhn0dws8vmgfhkn3vwfr39ryw24s7l9t9r",
+                  "validator_address": "cosmosvaloper1jcjxgyzewjnv05tveud5h3fm5dphytt5pnu6sw",
+                  "value": {
+                    "amount": "500000",
+                    "denom": "altg"
+                  }
+                }
+              }
+            ],
+            "signatures": [
+              {
+                "pub_key": {
+                  "type": "tendermint/PubKeySecp256k1",
+                  "value": "A76Btp+xKxkCojkKgOvwx2z9p80t9AU5yqM1qXisSDDc"
+                },
+                "signature": "1RyL7Qquj5GMYJxgu3EL+ESvlRY23Dk1SRt11f/bPp1jHU9hXxl5mqFWxOw6NnJerha4An3Tlx363iys7QGJmA=="
+              }
+            ]
+          }
+        },
+        {
+          "type": "auth/StdTx",
+          "value": {
+            "fee": {
+              "amount": [],
+              "gas": "200000"
+            },
+            "memo": "f5674655445b64974cd75c809c960965a67e780b@159.65.74.76:26656",
+            "msg": [
+              {
+                "type": "cosmos-sdk/MsgCreateValidator",
+                "value": {
+                  "commission": {
+                    "max_change_rate": "0.010000000000000000",
+                    "max_rate": "0.200000000000000000",
+                    "rate": "0.100000000000000000"
+                  },
+                  "delegator_address": "cosmos1cn43mt78q6jsnmv8x3jf5r8urr2kft32q23tr3",
+                  "description": {
+                    "details": "",
+                    "identity": "",
+                    "moniker": "althea-validator",
+                    "website": ""
+                  },
+                  "min_self_delegation": "1",
+                  "pubkey": "cosmosvalconspub1zcjduepq2997ycr40hkxlltfnh7rwzjme3c5jy48uwmfpy50l69ma6p6z5xslrp55n",
+                  "validator_address": "cosmosvaloper1cn43mt78q6jsnmv8x3jf5r8urr2kft3297970z",
+                  "value": {
+                    "amount": "500000000",
+                    "denom": "altg"
+                  }
+                }
+              }
+            ],
+            "signatures": [
+              {
+                "pub_key": {
+                  "type": "tendermint/PubKeySecp256k1",
+                  "value": "AmdwaTRkPoZItOCeEmo36jwDDL2HmiIFP0lBslKospG9"
+                },
+                "signature": "tnLaErTtP0Pn6Q0qgkV+XW2Wu4PJeaWhQb6RfgxKcgN+Zkr2s/ff9meDeZx5evlAT/T/Aeiiu2/QLPWqWRqRsw=="
+              }
+            ]
+          }
+        }
+      ]
     },
     "gov": {
       "deposit_params": {
@@ -163,7 +254,9 @@
       "max_age": "1000000"
     },
     "validator": {
-      "pub_key_types": ["ed25519"]
+      "pub_key_types": [
+        "ed25519"
+      ]
     }
   },
   "genesis_time": "2019-06-20T17:07:17.285157867Z"
