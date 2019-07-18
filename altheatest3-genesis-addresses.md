@@ -7,3 +7,5 @@ cosmos1v5c3v8802wtrw06jakk00smtqyvw99xahug9gl: Sebas
 cosmos1cn43mt78q6jsnmv8x3jf5r8urr2kft32q23tr3: Althea-Jehan
 
 cosmos13fkdunuukj0tylpslcqshnz6f6tm9vr0a6drfn: Browep
+
+cosmos19n33n5cvpha875z9ztkf3m78cs4g8mawu8qqw8: Bitcoinera
