@@ -1,5 +1,5 @@
 {
-  "genesis_time": "2019-06-25T03:50:00.0Z",
+  "genesis_time": "2019-06-25T03:50:00Z",
   "chain_id": "altheatest2",
   "consensus_params": {
     "block": {
@@ -18,7 +18,7 @@
   },
   "validators": [
     {
-      "address": "",
+      "address": "A9677737FED17F25DAD5C00CDBE6150267AC6B64",
       "pub_key": {
         "type": "tendermint/PubKeyEd25519",
         "value": "zlYsO7Glx7T7imEGnpq0Feb2ugdm0JvacWOSOJRkcqs="
@@ -27,7 +27,7 @@
       "name": "testing"
     },
     {
-      "address": "",
+      "address": "E3EBF648E0BE5DFFD954C4463CE59C3646C94A86",
       "pub_key": {
         "type": "tendermint/PubKeyEd25519",
         "value": "UUviYHV97G/9aZ38NwpbzHFJEqfjtpCSj/6Lvug6FQ0="
