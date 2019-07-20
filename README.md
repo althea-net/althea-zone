@@ -46,7 +46,7 @@ Most people will not be validating themselves but “delegating” tokens to a v
 
 Technically anything that can run a full node can validate, but since there's staked money on the line your concern for the stability and reliability of your validator should be proportinal to the amount of money staked with it. Very professional setups suggest colocating your own physical server and using a ledger to hold the actual validator private key.
 
-You validate or delegate tokens at you're sole risk, we make any recomendations in good faith with the hope that they are useful. There is no A validator is sort of like a miner in a proof of stake blockchain. They don't need any special hardware or a large amount of power. Instead validators risk 'staked' tokens. A validator will lock up staking tokens and lose 5% of them if they misbehave.
+You validate or delegate tokens at you're sole risk, we don't make any recomendations in good faith with the hope that they are useful. They don't need any special hardware or a large amount of power. Instead validators risk 'staked' tokens. A validator will lock up staking tokens and lose 5% of them if they misbehave.
 
 Misbehaving is defined as
 
