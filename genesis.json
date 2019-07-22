@@ -8,7 +8,7 @@
         "coins": [
           {
             "amount": "500000000",
-            "denom": "ualtg"
+            "denom": "stake"
           },
           {
             "amount": "1000000000",
@@ -28,7 +28,7 @@
         "coins": [
           {
             "amount": "500000000",
-            "denom": "ualtg"
+            "denom": "stake"
           },
           {
             "amount": "1000000000",
@@ -59,7 +59,7 @@
     "crisis": {
       "constant_fee": {
         "amount": "1333000000",
-        "denom": "ualtg"
+        "denom": "stake"
       }
     },
     "distr": {
@@ -88,7 +88,7 @@
         "min_deposit": [
           {
             "amount": "10000000",
-            "denom": "ualtg"
+            "denom": "stake"
           }
         ]
       },
@@ -116,7 +116,7 @@
         "inflation_max": "0.200000000000000000",
         "inflation_min": "0.070000000000000000",
         "inflation_rate_change": "0.130000000000000000",
-        "mint_denom": "ualtg"
+        "mint_denom": "stake"
       }
     },
     "params": null,
@@ -138,7 +138,7 @@
       "last_total_power": "0",
       "last_validator_powers": null,
       "params": {
-        "bond_denom": "ualtg",
+        "bond_denom": "stake",
         "max_entries": 7,
         "max_validators": 100,
         "unbonding_time": "1814400000000000"
