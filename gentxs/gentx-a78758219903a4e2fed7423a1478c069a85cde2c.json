@@ -22,7 +22,7 @@
           "pubkey": "cosmosvalconspub1zcjduepq6k5zdqp4gtq245v37jtveuley2lm7hmyhlpvtrppylc03x2dpm7qgqfuvn",
           "value": {
             "denom": "stake",
-            "amount": "100000000"
+            "amount": "500000000"
           }
         }
       }
@@ -37,7 +37,7 @@
           "type": "tendermint/PubKeySecp256k1",
           "value": "AudSszu55ezvsU+KTF1Jqnvi87QS1mK/2GUC7eyKaY43"
         },
-        "signature": "5MLyKsgycUg+bje1zedxB3RRmwd9AkSxVMVRUjPA40UnIKI054tnVoZbvUVt9vzpNHSVa+Wbf1tZ+PWHpG3poA=="
+        "signature": "9c3RmVyMjgDte1U5DjEKee4fpE48bpdv0efRNvser8cWnfQkeHspobhJWctX9yHTQtkqL5e1PsJAdxLlq9rRuQ=="
       }
     ],
     "memo": "a78758219903a4e2fed7423a1478c069a85cde2c@198.245.51.51:26656"
