@@ -14,9 +14,11 @@ Now that you have the full node software, Gaiad installed we need to add in the 
 configuraton file (genesis.json) you'll find the latest version of that file in this repository.
 
 ```
+cd
+git clone https://github.com/althea-net/althea-zone
 mkdir ~/.gaiad
 mkdir ~/.gaiad/config
-cp althea-zone/genesis.json ~/.gaiad/
+cp althea-zone/genesis.json ~/.gaiad/config
 ```
 
 Finally start Gaiad this will hook up to the seed nodes provided and start syncing the chain. After you first
