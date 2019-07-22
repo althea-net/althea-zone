@@ -26,7 +26,7 @@ start Gaiad it will remember peers it has seen before, so you don't need the `--
 run.
 
 ```
-gaiad start --p2p.seeds=f5674655445b64974cd75c809c960965a67e780b@159.65.74.76:26656, 20d682e14b3bb1f8dbdb0492ea5f401c0c088163@kilpatrickjustin.me:26656
+gaiad start --p2p.persistant-peers=f5674655445b64974cd75c809c960965a67e780b@159.65.74.76:26656, 20d682e14b3bb1f8dbdb0492ea5f401c0c088163@kilpatrickjustin.me:26656
 ```
 
 # Running a validator
@@ -79,7 +79,7 @@ Generate your private key
 gaiacli keys add 0
 # view the validator pubkey you have generated this is different from the pubkey you would see
 # with gaiacli keys list
-gaiad tendermint show_validator
+gaiad tendermint show-validator
 # Generate a transaction to indicate your intention to start staking, you should have gaiad running
 # when you do this so that you can publish the transaction.
 gaiacli tx staking create-validator --amount 0altg --moniker <your nickname> --pubkey <your key from the last step here> --commission-rate 10 --commission-max-rate 100 --commission-max-change-rate 1 --min-self-delegation 0
