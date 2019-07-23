@@ -15,3 +15,5 @@ cosmos17wzwy4cxmea4tw3g5ffyw3zka79n8qch7ed785: Asoltys
 cosmos1v0z8fxddwa6ftlfeawuwrq677vgk76v2w3v3mc: POSBakerz
 
 cosmos1yst70kyc7pdh8vk0fhmk20x0sa0yplxgmlfxs5: Isaac
+
+cosmos15at47see52v0rv70q4xqcxwa6dhw6ecurjj44x: Figment
