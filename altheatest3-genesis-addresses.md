@@ -19,3 +19,5 @@ cosmos1yst70kyc7pdh8vk0fhmk20x0sa0yplxgmlfxs5: Isaac
 cosmos15at47see52v0rv70q4xqcxwa6dhw6ecurjj44x: Figment
 
 cosmos1hgu4ejl8rx68q7jhch4gh7d7rlumtxjsqc6hdn: Victor
+
+cosmos102vnpwuxv5kzmwgrw353vaqse06xn8np8h5x4a: BasBlock
