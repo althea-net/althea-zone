@@ -21,12 +21,10 @@ mkdir ~/.gaiad/config
 cp althea-zone/genesis.json ~/.gaiad/config
 ```
 
-Finally start Gaiad this will hook up to the seed nodes provided and start syncing the chain. After you first
-start Gaiad it will remember peers it has seen before, so you don't need the `--p2p.seeds` flag after your first
-run.
+Finally start Gaiad this will hook up to the seed nodes provided and start syncing the chain.
 
 ```
-gaiad start --p2p.persistant-peers=f5674655445b64974cd75c809c960965a67e780b@159.65.74.76:26656, 20d682e14b3bb1f8dbdb0492ea5f401c0c088163@kilpatrickjustin.me:26656
+gaiad start --p2p.persistent_peers=f5674655445b64974cd75c809c960965a67e780b@159.65.74.76:26656, 20d682e14b3bb1f8dbdb0492ea5f401c0c088163@kilpatrickjustin.me:26656
 ```
 
 # Running a validator
