@@ -14,16 +14,17 @@ Now that you have the full node software, Gaiad installed we need to add in the 
 configuraton file (genesis.json) you'll find the latest version of that file in this repository.
 
 ```
+cd
+git clone https://github.com/althea-net/althea-zone
 mkdir -p ~/.gaiad/config
-cp althea-zone/genesis.json ~/.gaiad/config/
-```
-
-Finally start Gaiad this will hook up to the seed nodes provided and start syncing the chain. After you first
-start Gaiad it will remember peers it has seen before, so you don't need the `--p2p.seeds` flag after your first
-run.
+cp althea-zone/genesis.json ~/.gaiad/config
 
 ```
-gaiad start --p2p.seeds=f5674655445b64974cd75c809c960965a67e780b@159.65.74.76:26656, 20d682e14b3bb1f8dbdb0492ea5f401c0c088163@kilpatrickjustin.me:26656
+
+Finally start Gaiad this will hook up to the seed nodes provided and start syncing the chain.
+
+```
+gaiad start --p2p.persistent_peers=f5674655445b64974cd75c809c960965a67e780b@159.65.74.76:26656, 20d682e14b3bb1f8dbdb0492ea5f401c0c088163@kilpatrickjustin.me:26656
 ```
 
 # Running a validator
@@ -45,7 +46,7 @@ Most people will not be validating themselves but “delegating” tokens to a v
 
 Technically anything that can run a full node can validate, but since there's staked money on the line your concern for the stability and reliability of your validator should be proportinal to the amount of money staked with it. Very professional setups suggest colocating your own physical server and using a ledger to hold the actual validator private key.
 
-You validate or delegate tokens at you're sole risk, we make any recomendations in good faith with the hope that they are useful. There is no A validator is sort of like a miner in a proof of stake blockchain. They don't need any special hardware or a large amount of power. Instead validators risk 'staked' tokens. A validator will lock up staking tokens and lose 5% of them if they misbehave.
+You validate or delegate tokens at you're sole risk, we don't make any recomendations in good faith with the hope that they are useful. They don't need any special hardware or a large amount of power. Instead validators risk 'staked' tokens. A validator will lock up staking tokens and lose 5% of them if they misbehave.
 
 Misbehaving is defined as
 
@@ -76,7 +77,7 @@ Generate your private key
 gaiacli keys add 0
 # view the validator pubkey you have generated this is different from the pubkey you would see
 # with gaiacli keys list
-gaiad tendermint show_validator
+gaiad tendermint show-validator
 # Generate a transaction to indicate your intention to start staking, you should have gaiad running
 # when you do this so that you can publish the transaction.
 gaiacli tx staking create-validator --amount 0altg --moniker <your nickname> --pubkey <your key from the last step here> --commission-rate 10 --commission-max-rate 100 --commission-max-change-rate 1 --min-self-delegation 0
