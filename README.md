@@ -1,14 +1,30 @@
+# Joining Altheatest3
+
+We are about to start the Altheatest3 chain and we are going through the process of collecting addresses for genesis validators. In order to make an address and be added to the list please see the following sections.
+
+[Download and install Gaia](#download-and-build-gaiad)
+
+[Use Gaia to generate your key](#generate-your-private-key-using-gaiad)
+
+When you have your address starting in 'cosmos1' either open a pull request adding it to the file `altheatest3-genesis-addresses.md` or ping us in the [althea-validators chat channel](https://discordapp.com/invite/vw8twzR)
+
+You won't be able to run a full node until Altheatest3 is started, so just generate your key and hang tight.
+
 # Running a full node on the Althea Blockchain / Cosmos zone
 
-Download and build Gaiad, you must use the exact version specified here. You need Go > 1.12
+## Download and build Gaiad
+
+You must use the exact version specified here. You need Go > 1.12
 
 ```
 git clone https://github.com/cosmos/cosmos-sdk/
 cd cosmos-sdk
-git checkout v0.35.0
+git checkout v0.34.7
 make tools
 make install
 ```
+
+## Setup the current Althea chain genesis file
 
 Now that you have the full node software, Gaiad installed we need to add in the Althea chain
 configuraton file (genesis.json) you'll find the latest version of that file in this repository.
@@ -70,17 +86,24 @@ Genesis file is created -> Genesis validators create gentx's using the Genesis f
 
 To validate on an online chain you must first generate a private key, we will give example commands for generating a key on your own machine. If you have a need for higher security it's recomended that you instead generate a key using the Cosmos Ledger app.
 
-Generate your private key
+#### Generate your private key using Gaiad
 
 ```
 # generate a key, set a passphrase and backup the keywords
 gaiacli keys add 0
+# view your address and pubkey
+gaiacli keys list
 # view the validator pubkey you have generated this is different from the pubkey you would see
 # with gaiacli keys list
 gaiad tendermint show-validator
+```
+
+#### Generate and publish a staking transaction
+
+```
 # Generate a transaction to indicate your intention to start staking, you should have gaiad running
 # when you do this so that you can publish the transaction.
-gaiacli tx staking create-validator --amount 0altg --moniker <your nickname> --pubkey <your key from the last step here> --commission-rate 10 --commission-max-rate 100 --commission-max-change-rate 1 --min-self-delegation 0
+gaiacli tx staking create-validator --amount 0altg --moniker <your nickname> --pubkey <your key from 'gaiad tendermind show-validator'> --commission-rate 10 --commission-max-rate 100 --commission-max-change-rate 1 --min-self-delegation 0
 ```
 
 Once you successfully run the last command you will be running as a validator on the testnet, your node will need to remain online and be delegated some altg in order to start generating validator rewards. Be careful to avoid the bad behavior we talked about previously
