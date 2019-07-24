@@ -8,7 +8,7 @@ We are about to start the Altheatest3 chain and we are going through the process
 
 When you have your address starting in 'cosmos1' either open a pull request adding it to the file `altheatest3-genesis-addresses.md` or ping us in the [althea-validators chat channel](https://discordapp.com/invite/vw8twzR)
 
-You won't be able to run a full node until Altheatest3 is started, so just generate your key and hang tight.
+### You won't be able to run a full node until altheatest3 is started, so just generate your key and hang tight.The below instructions will apply once altheatest3 is started, at which point we will delete this message.
 
 # Running a full node on the Althea Blockchain / Cosmos zone
 
