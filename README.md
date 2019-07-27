@@ -40,7 +40,7 @@ gaiad init --chain-id=altheatest3 <moniker>
 gaiad add-genesis-account <your address> 100000000ualtg
 
 # Create the gentx
-gaiad gentx --name <your key name> --amount 100000000ualtg
+gaiad gentx --name <your key name> --amount 100000000ualtg --ip <your public ip>
 ```
 
 This will write your genesis transaction to \$HOME/.gaiad/config/gentx/gentx-<gen-tx-hash>.json. This should be the only file in your gentx directory. If you have more than one, delete them and repeat the gentx command above.
