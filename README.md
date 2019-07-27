@@ -23,6 +23,7 @@ make install
 ```
 # generate a key, set a passphrase and backup the keywords
 gaiacli keys add <your key name>
+
 # view your address and pubkey
 gaiacli keys list
 ```
