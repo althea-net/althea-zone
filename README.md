@@ -1,16 +1,10 @@
-# Joining Altheatest3
+# Altheatest3 Instructions
 
-We are about to start the Altheatest3 chain and we are going through the process of collecting addresses for genesis validators. In order to make an address and be added to the list please see the following sections.
+These instructions will be updated as we move through the process.
 
-[Download and install Gaia](#download-and-build-gaiad)
+## How to make a gentx
 
-[Use Gaia to generate your key](#generate-your-private-key-using-gaiad)
-
-When you have your address starting in 'cosmos1' either open a pull request adding it to the file `altheatest3-genesis-addresses.md` or ping us in the [althea-validators chat channel](https://discordapp.com/invite/vw8twzR)
-
-### You won't be able to run a full node until altheatest3 is started, so just generate your key and hang tight.The below instructions will apply once altheatest3 is started, at which point we will delete this message.
-
-# Running a full node on the Althea Blockchain / Cosmos zone
+We are currently gathering `gentx` files to create the `genesis.json` file which will be used to start the altheatest3 blockchain.
 
 ## Download and build Gaiad
 
@@ -19,31 +13,40 @@ You must use the exact version specified here. You need Go > 1.12
 ```
 git clone https://github.com/cosmos/cosmos-sdk/
 cd cosmos-sdk
-git checkout v0.34.7
+git checkout v0.35.0
 make tools
 make install
 ```
 
-## Setup the current Althea chain genesis file
-
-Now that you have the full node software, Gaiad installed we need to add in the Althea chain
-configuraton file (genesis.json) you'll find the latest version of that file in this repository.
+## Generate your private key using Gaiad
 
 ```
-cd
-git clone https://github.com/althea-net/althea-zone
-mkdir -p ~/.gaiad/config
-cp althea-zone/genesis.json ~/.gaiad/config
-
+# generate a key, set a passphrase and backup the keywords
+gaiacli keys add <your key name>
+# view your address and pubkey
+gaiacli keys list
 ```
 
-Finally start Gaiad this will hook up to the seed nodes provided and start syncing the chain.
+## Generate your gentx
 
 ```
-gaiad start --p2p.persistent_peers=f5674655445b64974cd75c809c960965a67e780b@159.65.74.76:26656, 20d682e14b3bb1f8dbdb0492ea5f401c0c088163@kilpatrickjustin.me:26656
+# Your moniker is the name of your validator that will be publically displayed
+gaiad init --chain-id=altheatest3 <moniker>
+
+# We are using ualtg as our base denomination. This is one one millionth of an altg.
+# So 100000000ualtg is 100altg, which is what validators are getting at the genesis
+# of this testnet.
+gaiad add-genesis-account <your address> 100000000ualtg
+
+# Create the gentx
+gaiad gentx --name <your key name> --amount 100000000ualtg
 ```
 
-# Running a validator
+This will write your genesis transaction to \$HOME/.gaiad/config/gentx/gentx-<gen-tx-hash>.json. This should be the only file in your gentx directory. If you have more than one, delete them and repeat the gentx command above.
+
+Now, just submit a pull request to this repo which puts your gentx in the gentxs folder. Once we have everyone's, we will compile them into a complete `genesis.json`.
+
+# General information on running a validator
 
 ## What is a validator?
 
@@ -73,37 +76,3 @@ Misbehaving is defined as
 
 Most people will not be validating themselves but “delegating” tokens to a validator. When you delegate your tokens you are adding them to that validators stake and you will split the profits from using your tokens with the validator.
 guarantee of safety in validating.
-
-## Enough jabbering what buttons do I press?
-
-### Genesis validators
-
-Genesis validators are a special case for when a new chain is being started. You create and submit a gentx using `gaiacli gentx` (read the help) which is then added into the `genesis.json` that it used by all parties to start the chain. This is a bit of a back and forth process.
-
-Genesis file is created -> Genesis validators create gentx's using the Genesis file -> A new genesis file is created containing all of those initial validators and their gentx's -> the chain is started.
-
-### Validating on an online chain
-
-To validate on an online chain you must first generate a private key, we will give example commands for generating a key on your own machine. If you have a need for higher security it's recomended that you instead generate a key using the Cosmos Ledger app.
-
-#### Generate your private key using Gaiad
-
-```
-# generate a key, set a passphrase and backup the keywords
-gaiacli keys add 0
-# view your address and pubkey
-gaiacli keys list
-# view the validator pubkey you have generated this is different from the pubkey you would see
-# with gaiacli keys list
-gaiad tendermint show-validator
-```
-
-#### Generate and publish a staking transaction
-
-```
-# Generate a transaction to indicate your intention to start staking, you should have gaiad running
-# when you do this so that you can publish the transaction.
-gaiacli tx staking create-validator --amount 0altg --moniker <your nickname> --pubkey <your key from 'gaiad tendermind show-validator'> --commission-rate 10 --commission-max-rate 100 --commission-max-change-rate 1 --min-self-delegation 0
-```
-
-Once you successfully run the last command you will be running as a validator on the testnet, your node will need to remain online and be delegated some altg in order to start generating validator rewards. Be careful to avoid the bad behavior we talked about previously
