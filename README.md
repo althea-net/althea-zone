@@ -2,7 +2,7 @@
 
 These instructions will be updated as we move through the process.
 
-We'd like to get all gentxs in by Wednesday, July 31st. We will start validating the following Monday, August 5th.
+We'd like to get all gentxs in by Wednesday, July 31st. We will start validating the following Monday, August 5th, at 5pm PDT.
 
 ## How to make a gentx
 
