@@ -8,9 +8,9 @@ cosmos1gvjdsfjqszgnrd6lyku0830939jn3skwl077wy: Althea-Jehan
 
 cosmos13fkdunuukj0tylpslcqshnz6f6tm9vr0a6drfn: Browep
 
-cosmos19n33n5cvpha875z9ztkf3m78cs4g8mawu8qqw8: Bitcoinera
+cosmos1s3phazeg7p6xcftd5ce8q4k4jylmw4q3wshw9q: Bitcoinera
 
-cosmos17wzwy4cxmea4tw3g5ffyw3zka79n8qch7ed785: Asoltys
+cosmos1z6s8unktt0em3cnuw6dakewufmeap0y6m964sv: Asoltys
 
 cosmos1v0z8fxddwa6ftlfeawuwrq677vgk76v2w3v3mc: POSBakerz
 
@@ -31,3 +31,5 @@ cosmos14lsedpygn54ch58sl0rr2dz5jxgasue8tke37p: ka4ok
 cosmos126cgz2202zwemx25382zsxnmem2nqz2py7gxgm: blitmore
 
 cosmos1mqyutur58fx0pfdtpfh34f62w6x9vk2fnd56qg: dasheng
+
+cosmos1ftal9qkrvm5vq28my6al3ajsyny46gp97fv0z9: meow
