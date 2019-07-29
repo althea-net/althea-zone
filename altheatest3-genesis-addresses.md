@@ -10,7 +10,7 @@ cosmos13fkdunuukj0tylpslcqshnz6f6tm9vr0a6drfn: Browep
 
 cosmos19n33n5cvpha875z9ztkf3m78cs4g8mawu8qqw8: Bitcoinera
 
-cosmos17wzwy4cxmea4tw3g5ffyw3zka79n8qch7ed785: Asoltys
+cosmos1z6s8unktt0em3cnuw6dakewufmeap0y6m964sv: Asoltys
 
 cosmos1v0z8fxddwa6ftlfeawuwrq677vgk76v2w3v3mc: POSBakerz
 
