@@ -8,7 +8,7 @@ cosmos1gvjdsfjqszgnrd6lyku0830939jn3skwl077wy: Althea-Jehan
 
 cosmos13fkdunuukj0tylpslcqshnz6f6tm9vr0a6drfn: Browep
 
-cosmos19n33n5cvpha875z9ztkf3m78cs4g8mawu8qqw8: Bitcoinera
+cosmos1s3phazeg7p6xcftd5ce8q4k4jylmw4q3wshw9q: Bitcoinera
 
 cosmos1z6s8unktt0em3cnuw6dakewufmeap0y6m964sv: Asoltys
 
