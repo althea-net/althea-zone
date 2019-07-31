@@ -4,6 +4,8 @@ These instructions will be updated as we move through the process.
 
 We'd like to get all gentxs in by Wednesday, July 31st. We will start validating the following Monday, August 5th, at 5pm PDT.
 
+If you have any questions, visit our Discord chat: https://discordapp.com/invite/gxJhKZ2
+
 ## How to make a gentx
 
 We are currently gathering `gentx` files to create the `genesis.json` file which will be used to start the altheatest3 blockchain.
