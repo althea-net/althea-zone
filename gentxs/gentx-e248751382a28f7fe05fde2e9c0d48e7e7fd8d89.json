@@ -1,1 +1,45 @@
-{"type":"auth/StdTx","value":{"msg":[{"type":"cosmos-sdk/MsgCreateValidator","value":{"description":{"moniker":"Figment Networks","identity":"","website":"","details":""},"commission":{"rate":"0.100000000000000000","max_rate":"0.200000000000000000","max_change_rate":"0.010000000000000000"},"min_self_delegation":"1","delegator_address":"cosmos15at47see52v0rv70q4xqcxwa6dhw6ecurjj44x","validator_address":"cosmosvaloper15at47see52v0rv70q4xqcxwa6dhw6ecuxxxqe4","pubkey":"cosmosvalconspub1zcjduepq6ffxyr7wv83dduusdu7hvq9jxs3rhf6ty4dmarhwj6fwzpwrhlnqpx4ue7","value":{"denom":"ualtg","amount":"90000000"}}}],"fee":{"amount":null,"gas":"200000"},"signatures":[{"pub_key":{"type":"tendermint/PubKeySecp256k1","value":"AwT1oLs+xmmzjCf8BKalYEkMzldbMJ/IfK9jz8n0ZF9s"},"signature":"hBXOlQ/2e1G+jP5H8+Ve+zaqV2Nrh8aWhHoORiW7L88Q1eBScnILSTibXojDI0kRyvCnu8hVXCvUfetrsVjjVg=="}],"memo":"e248751382a28f7fe05fde2e9c0d48e7e7fd8d89@165.22.237.124:26656"}}
+{
+    "type": "auth/StdTx",
+    "value": {
+        "msg": [
+            {
+                "type": "cosmos-sdk/MsgCreateValidator",
+                "value": {
+                    "description": {
+                        "moniker": "Figment Networks",
+                        "identity": "",
+                        "website": "",
+                        "details": ""
+                    },
+                    "commission": {
+                        "rate": "0.100000000000000000",
+                        "max_rate": "0.200000000000000000",
+                        "max_change_rate": "0.010000000000000000"
+                    },
+                    "min_self_delegation": "1",
+                    "delegator_address": "cosmos15at47see52v0rv70q4xqcxwa6dhw6ecurjj44x",
+                    "validator_address": "cosmosvaloper15at47see52v0rv70q4xqcxwa6dhw6ecuxxxqe4",
+                    "pubkey": "cosmosvalconspub1zcjduepq6ffxyr7wv83dduusdu7hvq9jxs3rhf6ty4dmarhwj6fwzpwrhlnqpx4ue7",
+                    "value": {
+                        "denom": "ualtg",
+                        "amount": "90000000"
+                    }
+                }
+            }
+        ],
+        "fee": {
+            "amount": null,
+            "gas": "200000"
+        },
+        "signatures": [
+            {
+                "pub_key": {
+                    "type": "tendermint/PubKeySecp256k1",
+                    "value": "AwT1oLs+xmmzjCf8BKalYEkMzldbMJ/IfK9jz8n0ZF9s"
+                },
+                "signature": "hBXOlQ/2e1G+jP5H8+Ve+zaqV2Nrh8aWhHoORiW7L88Q1eBScnILSTibXojDI0kRyvCnu8hVXCvUfetrsVjjVg=="
+            }
+        ],
+        "memo": "e248751382a28f7fe05fde2e9c0d48e7e7fd8d89@165.22.237.124:26656"
+    }
+}

@@ -2,54 +2,21 @@
 
 These instructions will be updated as we move through the process.
 
-We'd like to get all gentxs in by Wednesday, July 31st. We will start validating the following Monday, August 5th, at 5pm PDT.
+We will start validating the Monday, August 5th, at 5pm PDT.
 
 If you have any questions, visit our Discord chat: https://discordapp.com/invite/gxJhKZ2
 
-## How to make a gentx
+At this point, if you haven't gotten your `gentx` in for altheatest3, it is too late. Please stay tuned, we may be able to add you after the chain is started, but you won't be able to tell people that you were a genesis validator on the first Althea test chain.
 
-We are currently gathering `gentx` files to create the `genesis.json` file which will be used to start the altheatest3 blockchain.
+## Starting the chain
 
-## Download and build Gaiad
+It's pretty simple now. Just grab the `genesis.json` file from this repo and put it in `.gaiad/config/genesis.json`
 
-You must use the exact version specified here. You need Go > 1.12
+Now start your validator with:
 
-```
-git clone https://github.com/cosmos/cosmos-sdk/
-cd cosmos-sdk
-git checkout v0.35.0
-make tools
-make install
-```
+`gaiad start --p2p.persistent_peers "20d682e14b3bb1f8dbdb0492ea5f401c0c088163@198.245.51.51:26656"`
 
-## Generate your private key using Gaiad
-
-```
-# generate a key, set a passphrase and backup the keywords
-gaiacli keys add <your key name>
-
-# view your address and pubkey
-gaiacli keys list
-```
-
-## Generate your gentx
-
-```
-# Your moniker is the name of your validator that will be publically displayed
-gaiad init --chain-id=altheatest3 <moniker>
-
-# We are using ualtg as our base denomination. This is one one millionth of an altg.
-# So 100000000ualtg is 100altg, which is what validators are getting at the genesis
-# of this testnet.
-gaiad add-genesis-account <your address> 100000000ualtg
-
-# Create the gentx
-gaiad gentx --name <your key name> --amount 100000000ualtg --ip <your public ip>
-```
-
-This will write your genesis transaction to \$HOME/.gaiad/config/gentx/gentx-<gen-tx-hash>.json. This should be the only file in your gentx directory. If you have more than one, delete them and repeat the gentx command above.
-
-Now, just submit a pull request to this repo which puts your gentx in the gentxs folder. Once we have everyone's, we will compile them into a complete `genesis.json`.
+It will wait until Monday the 5th at 5pm PST to start validating.
 
 # General information on running a validator
 
