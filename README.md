@@ -10,6 +10,10 @@ At this point, if you haven't gotten your `gentx` in for altheatest3, it is too 
 
 ## Starting the chain
 
+### TEMPORARY PAUSE - THIS GENESIS.JSON WILL NOT WORK.
+
+The reason is that someone's gentx was bad, and the `gaiad collect-gentxs` command for some reason doesn't check for that. We're going to be writing a script to validate all the gentxs and hopefully have a new genesis.json out soon.
+
 It's pretty simple now. Just grab the `genesis.json` file from this repo and put it in `.gaiad/config/genesis.json`
 
 Now start your validator with:
