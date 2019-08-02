@@ -1,1 +1,45 @@
-{"type":"auth/StdTx","value":{"msg":[{"type":"cosmos-sdk/MsgCreateValidator","value":{"description":{"moniker":"justin-altg-test-validator","identity":"","website":"kilpatrickjustin.me","details":""},"commission":{"rate":"0.100000000000000000","max_rate":"0.200000000000000000","max_change_rate":"0.010000000000000000"},"min_self_delegation":"1","delegator_address":"cosmos1jcjxgyzewjnv05tveud5h3fm5dphytt5y8g0ua","validator_address":"cosmosvaloper1jcjxgyzewjnv05tveud5h3fm5dphytt5pnu6sw","pubkey":"cosmosvalconspub1zcjduepqeetzcwa35hrmf7u2vyrfax45zhn0dws8vmgfhkn3vwfr39ryw24s7l9t9r","value":{"denom":"ualtg","amount":"100000000"}}}],"fee":{"amount":null,"gas":"200000"},"signatures":[{"pub_key":{"type":"tendermint/PubKeySecp256k1","value":"A76Btp+xKxkCojkKgOvwx2z9p80t9AU5yqM1qXisSDDc"},"signature":"xsKhFLP1IX98UWsjAgF8BySl04cYA9j2Tw62VfUCk1BcQXAZjRSjjvZRO0vFmr9ong9NLVyPs8/3cfuz/jOBHQ=="}],"memo":"20d682e14b3bb1f8dbdb0492ea5f401c0c088163@198.245.51.51:26656"}}
+{
+    "type": "auth/StdTx",
+    "value": {
+        "msg": [
+            {
+                "type": "cosmos-sdk/MsgCreateValidator",
+                "value": {
+                    "description": {
+                        "moniker": "justin-altg-test-validator",
+                        "identity": "",
+                        "website": "kilpatrickjustin.me",
+                        "details": ""
+                    },
+                    "commission": {
+                        "rate": "0.100000000000000000",
+                        "max_rate": "0.200000000000000000",
+                        "max_change_rate": "0.010000000000000000"
+                    },
+                    "min_self_delegation": "1",
+                    "delegator_address": "cosmos1jcjxgyzewjnv05tveud5h3fm5dphytt5y8g0ua",
+                    "validator_address": "cosmosvaloper1jcjxgyzewjnv05tveud5h3fm5dphytt5pnu6sw",
+                    "pubkey": "cosmosvalconspub1zcjduepqeetzcwa35hrmf7u2vyrfax45zhn0dws8vmgfhkn3vwfr39ryw24s7l9t9r",
+                    "value": {
+                        "denom": "ualtg",
+                        "amount": "100000000"
+                    }
+                }
+            }
+        ],
+        "fee": {
+            "amount": null,
+            "gas": "200000"
+        },
+        "signatures": [
+            {
+                "pub_key": {
+                    "type": "tendermint/PubKeySecp256k1",
+                    "value": "A76Btp+xKxkCojkKgOvwx2z9p80t9AU5yqM1qXisSDDc"
+                },
+                "signature": "xsKhFLP1IX98UWsjAgF8BySl04cYA9j2Tw62VfUCk1BcQXAZjRSjjvZRO0vFmr9ong9NLVyPs8/3cfuz/jOBHQ=="
+            }
+        ],
+        "memo": "20d682e14b3bb1f8dbdb0492ea5f401c0c088163@198.245.51.51:26656"
+    }
+}
