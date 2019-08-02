@@ -10,17 +10,17 @@ At this point, if you haven't gotten your `gentx` in for altheatest3, it is too 
 
 ## Starting the chain
 
-### TEMPORARY PAUSE - THIS GENESIS.JSON WILL NOT WORK.
+It's pretty simple now. Just grab the `genesis.json` file from this repo and put it in `.gaiad/config/genesis.json`
 
-The reason is that someone's gentx was bad, and the `gaiad collect-gentxs` command for some reason doesn't check for that. We're going to be writing a script to validate all the gentxs and hopefully have a new genesis.json out soon.
+Now start your validator with:
 
-// It's pretty simple now. Just grab the `genesis.json` file from this repo and put it in `.gaiad/config/genesis.json`
+`gaiad start --p2p.persistent_peers "20d682e14b3bb1f8dbdb0492ea5f401c0c088163@198.245.51.51:26656"`
 
-// Now start your validator with:
+If things have gone well, it will give you the message:
 
-// `gaiad start --p2p.persistent_peers "20d682e14b3bb1f8dbdb0492ea5f401c0c088163@198.245.51.51:26656"`
+`I[2019-08-02|19:44:36.292] Starting ABCI with Tendermint                module=main`
 
-// It will wait until Monday the 5th at 5pm PST to start validating.
+It will wait until Monday the 5th at 5pm PST to start validating.
 
 # General information on running a validator
 
