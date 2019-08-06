@@ -8,20 +8,37 @@ If you have any questions, visit our Discord chat: https://discordapp.com/invite
 
 At this point, if you haven't gotten your `gentx` in for altheatest3, it is too late. Please stay tuned, we may be able to add you after the chain is started, but you won't be able to tell people that you were a genesis validator on the first Althea test chain.
 
-## Starting the chain
+## New plan: Centralized Start
 
-It's pretty simple now. Just grab the `genesis.json` file from this repo and put it in `.gaiad/config/genesis.json`
+Unfortunately, we were one validator short of having a quorum to start the chain. After an hour of cliff-hangers trying to get one more person on, we decided to go with a centralized start. Justin started his validator and everyone else added a new `genesis.json` with only Justin as a starting validator. Then they ran the commands below to add themselves once the chain was running. It's up now, and you can see it at: https://althea.zone/#/staking/validators/.
+
+### Joining
+
+NOTE: This will only work if you were included in the genesis.json, went through the gentx process, etc.
+
+Grab the `genesis.json` file from this repo and put it in `.gaiad/config/genesis.json`
+
+Reset the state with `gaiad unsafe-reset-all`
 
 Now start your validator with:
 
 `gaiad start --p2p.persistent_peers "20d682e14b3bb1f8dbdb0492ea5f401c0c088163@198.245.51.51:26656"`
 
-If things have gone well, it will give you the message:
+Now add yourself as a validator:
 
-`I[2019-08-02|19:44:36.292] Starting ABCI with Tendermint                module=main`
-
-It will wait until Monday the 5th at 5pm PST to start validating.
-
+```
+gaiacli tx staking create-validator \
+      --amount=100000000ualtg \
+      --commission-rate="0.10" \
+      --commission-max-rate="0.20" \
+      --commission-max-change-rate="0.01" \
+      --min-self-delegation="1" \
+      --pubkey=$(gaiacli keys show <your key name> --bech cons -p) \
+      --moniker=<your moniker> \
+      --chain-id="altheatest3" \
+      --from=$(gaiacli keys show <your key name> -a)
+ ```
+ 
 # General information on running a validator
 
 ## What is a validator?
