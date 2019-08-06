@@ -33,10 +33,10 @@ gaiacli tx staking create-validator \
       --commission-max-rate="0.20" \
       --commission-max-change-rate="0.01" \
       --min-self-delegation="1" \
-      --pubkey=$(gaiacli keys show <your key name> --bech cons -p) \
-      --moniker=<your moniker> \
+      --pubkey=$(gaiad tendermint show-validator) \
+      --moniker=<YOUR MONIKER> \
       --chain-id="altheatest3" \
-      --from=$(gaiacli keys show <your key name> -a)
+      --from=$(gaiacli keys show <YOUR KEY NAME> -a)
  ```
  
 # General information on running a validator
