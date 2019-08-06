@@ -32,7 +32,7 @@ gaiacli tx staking create-validator \
       --pubkey=$(gaiad tendermint show-validator) \
       --moniker=<YOUR MONIKER> \
       --chain-id="altheatest3" \
-      --from=$(gaiacli keys show <YOUR KEY NAME> -a)
+      --from=$(gaiacli keys show <YOUR ACCOUNT NAME> -a)
  ```
  
 # General information on running a validator
