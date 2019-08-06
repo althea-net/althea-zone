@@ -2,15 +2,11 @@
 
 These instructions will be updated as we move through the process.
 
-We will start validating the Monday, August 5th, at 5pm PDT.
-
 If you have any questions, visit our Discord chat: https://discordapp.com/invite/gxJhKZ2
-
-At this point, if you haven't gotten your `gentx` in for altheatest3, it is too late. Please stay tuned, we may be able to add you after the chain is started, but you won't be able to tell people that you were a genesis validator on the first Althea test chain.
 
 ## New plan: Centralized Start
 
-Unfortunately, we were one validator short of having a quorum to start the chain. After an hour of cliff-hangers trying to get one more person on, we decided to go with a centralized start. Justin started his validator and everyone else added a new `genesis.json` with only Justin as a starting validator. Then they ran the commands below to add themselves once the chain was running. It's up now, and you can see it at: https://althea.zone/#/staking/validators/.
+Unfortunately, we were one validator short of having a quorum to start the chain with the decentralized start procedure involving the gentxs. After an hour of cliff-hangers trying to get one more person on, we decided to go with a centralized start. Justin started his validator and everyone else added a new `genesis.json` with only Justin as a starting validator. Then they ran the commands below to add themselves once the chain was running. It's up now, it's decentralized, and you can see it at: https://althea.zone/#/staking/validators/.
 
 ### Joining
 
