@@ -4,37 +4,56 @@ These instructions will be updated as we move through the process.
 
 If you have any questions, visit our Discord chat: https://discordapp.com/invite/gxJhKZ2
 
-## New plan: Centralized Start
+## Upcoming Hard Fork
 
-Unfortunately, we were one validator short of having a quorum to start the chain with the decentralized start procedure involving the gentxs. After an hour of cliff-hangers trying to get one more person on, we decided to go with a centralized start. Justin started his validator and everyone else added a new `genesis.json` with only Justin as a starting validator. Then they ran the commands below to add themselves once the chain was running. It's up now, it's decentralized, and you can see it at: https://althea.zone/#/staking/validators/.
+Note: these instructions are for altheatest3 validators. If you're not on that chain, this is a good chance for you to join altheatest4. Sign up here: https://airtable.com/shrpjZDQYQa3Xd5oe to get some tokens and say hi in https://discordapp.com/invite/gxJhKZ2 to get instructions on getting caught up.
 
-### Joining
+We will be hard forking the Althea test chain to `altheatest4` on Monday, August 19th at 3pm PDT.
 
-NOTE: This will only work if you were included in the genesis.json, went through the gentx process, etc.
+Here are the changes that will be made to the chain's settings and state:
 
-Grab the `genesis.json` file from this repo and put it in `.gaiad/config/genesis.json`
+- Reduce governance proposal deposit to 1 ALTG. This will let us do governance proposals.
+- Reduce unbonding period to 1 day (86400000000000ns). This will make it easier to take your tokens out of delegation to send them around and stuff.
+- Mint 100 new ALTG for anyone who signed up for our validator notification mailing list at https://airtable.com/shrpjZDQYQa3Xd5oe. The newly minted tokens are to give people who weren't in altheatest3 a chance to get some tokens to start validating on altheatest4, and to give the old-timers a little extra worthless testnet pocket change.
 
-Reset the state with `gaiad unsafe-reset-all`
+Hard forks on Comsos chains are currently a surprisingly manual process. Here are the steps:
 
-Now start your validator with:
+1. Everyone waits until the predetermined time.
+2. Everyone stops `gaiad`, and exports a new genesis file which will be used to start the new chain.
+3. Everyone makes any necessary changes to the new genesis file (at least updating the chain id), and replaces the old genesis file with the new one.
+4. Everyone does `gaiad unsafe-reset-all`, and `gaiad start`.
+5. Once validators controlling 2/3rds of the voting power on the chain have completed these steps, the chain starts again.
 
-`gaiad start --p2p.persistent_peers "20d682e14b3bb1f8dbdb0492ea5f401c0c088163@198.245.51.51:26656"`
+Until step 5, the chain is halted. When the Cosmos hub hard forked from cosmoshub1 to cosmoshub2, this process took around 2 hours. Keep in mind that on the Cosmos hub, most validator operations are someone's full time job and have millions of dollars riding on them. It's likely that our little testnet will be halted for at least as long on Monday.
 
-Now add yourself as a validator:
+That being said, I think that a lot of this process can be automated. For future hard forks it might be good to use some kind of script that validators could start days ahead of time, which would wait for the right block, stop the chain, export and modify the genesis file, and start the new chain. Might be good to give that some thought as we go through this process.
+
+## Step-by-step instructions
+
+These are a simplified version of the cosmoshub1 to cosmoshub2 instructions here: https://github.com/cosmos/cosmos-sdk/wiki/Cosmos-Hub-1-Upgrade.
+
+One key difference is that they did the hard fork at a predetermined block, while we will be doing it at a predetermined time.
+
+### Step 1
+
+On or after August 19th, 3pm PDT, check this readme at https://github.com/althea-net/althea-zone for the correct block height to fork at. It will appear below:
 
 ```
-gaiacli tx staking create-validator \
-      --amount=100000000ualtg \
-      --commission-rate="0.10" \
-      --commission-max-rate="0.20" \
-      --commission-max-change-rate="0.01" \
-      --min-self-delegation="1" \
-      --pubkey=$(gaiad tendermint show-validator) \
-      --moniker=<YOUR MONIKER> \
-      --chain-id="altheatest3" \
-      --from=$(gaiacli keys show <YOUR ACCOUNT NAME> -a)
- ```
- 
+FORKING BLOCK: <to be determined>
+```
+
+### Step 2
+
+Stop any existing `gaiad` process and run `gaiad export --for-zero-height --height=<forking block from step 1 above> > altheatest3_genesis_export.json`
+
+### Step 3
+
+Run `python altheatest3-to-altheatest4.py altheatest3_genesis_export.json > genesis.json` to make the neccesary changes to the genesis file. `altheatest3-to-altheatest4.py` will appear in this repo before August 19th, 3pm PDT.
+
+### Step 4
+
+Run `gaiad unsafe-reset-all` and then `gaiad start --p2p.persistent_peers "20d682e14b3bb1f8dbdb0492ea5f401c0c088163@198.245.51.51:26656"` to hopefully start on the new chain!
+
 # General information on running a validator
 
 ## What is a validator?
