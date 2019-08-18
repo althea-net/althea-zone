@@ -6,7 +6,7 @@ If you have any questions, visit our Discord chat: https://discordapp.com/invite
 
 ## Upcoming Hard Fork
 
-Note: these instructions are for altheatest3 validators. If you're not on that chain, this is a good chance for you to join altheatest4. Sign up here: https://airtable.com/shrpjZDQYQa3Xd5oe to get some tokens, and say hi in https://discordapp.com/invite/gxJhKZ2 to get instructions on getting caught up.
+_Note: these instructions are for altheatest3 validators. If you're not on that chain, this is a good chance for you to join altheatest4. Sign up here: https://airtable.com/shrpjZDQYQa3Xd5oe to get some tokens, and say hi in https://discordapp.com/invite/gxJhKZ2 to get instructions on getting caught up._
 
 These instructions are all for gaiad v0.35.0, which you can get by doing:
 
