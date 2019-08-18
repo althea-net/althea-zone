@@ -6,7 +6,31 @@ If you have any questions, visit our Discord chat: https://discordapp.com/invite
 
 ## Upcoming Hard Fork
 
-Note: these instructions are for altheatest3 validators. If you're not on that chain, this is a good chance for you to join altheatest4. Sign up here: https://airtable.com/shrpjZDQYQa3Xd5oe to get some tokens and say hi in https://discordapp.com/invite/gxJhKZ2 to get instructions on getting caught up.
+Note: these instructions are for altheatest3 validators. If you're not on that chain, this is a good chance for you to join altheatest4. Sign up here: https://airtable.com/shrpjZDQYQa3Xd5oe to get some tokens, and say hi in https://discordapp.com/invite/gxJhKZ2 to get instructions on getting caught up.
+
+These instructions are all for gaiad v0.35.0, which you can get by doing:
+
+### Download and build Gaiad
+
+You must use the exact version specified here. You need Go > 1.12
+
+```
+git clone https://github.com/cosmos/cosmos-sdk/
+cd cosmos-sdk
+git checkout v0.35.0
+make tools
+make install
+```
+
+### Generate your private key using Gaiad
+
+```
+# generate a key, set a passphrase and backup the keywords
+gaiacli keys add <your key name>
+
+# view your address and pubkey
+gaiacli keys list
+```
 
 We will be hard forking the Althea test chain to `altheatest4` on Monday, August 19th at 3pm PDT.
 
@@ -49,6 +73,8 @@ Stop any existing `gaiad` process and run `gaiad export --for-zero-height --heig
 ### Step 3
 
 Run `python altheatest3-to-altheatest4.py altheatest3_genesis_export.json > genesis.json` to make the neccesary changes to the genesis file. `altheatest3-to-altheatest4.py` will appear in this repo before August 19th, 3pm PDT.
+
+Move the genesis file to your .gaiad directory, usually `~/.gaiad/config/genesis.json`.
 
 ### Step 4
 
