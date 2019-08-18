@@ -37,6 +37,7 @@ total_new_tokens_minted = 0
 
 
 def mint_ualtg_for(accounts, address, amount):
+    global total_new_tokens_minted
     total_new_tokens_minted = total_new_tokens_minted + amount
     for account in accounts:
         if account['address'] == address:
