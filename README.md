@@ -74,6 +74,8 @@ Stop any existing `gaiad` process and run `gaiad export --for-zero-height --heig
 
 Run `python altheatest3-to-altheatest4.py altheatest3_genesis_export.json > genesis.json` to make the neccesary changes to the genesis file. `altheatest3-to-altheatest4.py` will appear in this repo before August 19th, 3pm PDT.
 
+Move the genesis file to your .gaiad directory, usually `~/.gaiad/config/genesis.json`.
+
 ### Step 4
 
 Run `gaiad unsafe-reset-all` and then `gaiad start --p2p.persistent_peers "20d682e14b3bb1f8dbdb0492ea5f401c0c088163@198.245.51.51:26656"` to hopefully start on the new chain!
