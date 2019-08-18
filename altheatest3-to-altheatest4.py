@@ -52,7 +52,7 @@ def mint_ualtg_for(accounts, address, amount):
         "coins": [
             {
                 "denom": "ualtg",
-                "amount": amount
+                "amount": str(amount)
             }
         ],
         "sequence_number": "1",
