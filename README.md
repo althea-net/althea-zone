@@ -74,6 +74,13 @@ Stop any existing `gaiad` process and run `gaiad export --for-zero-height --heig
 
 Run `python3 altheatest3-to-altheatest4.py altheatest3_genesis_export.json > genesis.json` to make the neccesary changes to the genesis file. `altheatest3-to-altheatest4.py` will appear in this repo before August 19th, 3pm PDT.
 
+After this, you should be able to get this hash
+
+```
+$ jq -S -c -M '' genesis.json | shasum -a 256
+6a58940eb3d113a7139919b6aa2e155a177a1be068c623ecdc2d89b5b3a2b19d
+```
+
 Move the genesis file to your .gaiad directory, usually `~/.gaiad/config/genesis.json`.
 
 ### Step 4
