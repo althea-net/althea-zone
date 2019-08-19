@@ -63,7 +63,7 @@ One key difference is that they did the hard fork at a predetermined block, whil
 On or after August 19th, 3pm PDT, check this readme at https://github.com/althea-net/althea-zone for the correct block height to fork at. It will appear below:
 
 ```
-FORKING BLOCK: <to be determined>
+FORKING BLOCK: 206400
 ```
 
 ### Step 2
