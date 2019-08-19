@@ -68,7 +68,7 @@ FORKING BLOCK: 206400
 
 ### Step 2
 
-Stop any existing `gaiad` process and run `gaiad export --for-zero-height --height=<forking block from step 1 above> > altheatest3_genesis_export.json`
+Stop any existing `gaiad` process and run `gaiad export --for-zero-height --height=206400 > altheatest3_genesis_export.json`
 
 ### Step 3
 
