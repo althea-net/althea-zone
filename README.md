@@ -72,7 +72,7 @@ Stop any existing `gaiad` process and run `gaiad export --for-zero-height --heig
 
 ### Step 3
 
-Run `python altheatest3-to-altheatest4.py altheatest3_genesis_export.json > genesis.json` to make the neccesary changes to the genesis file. `altheatest3-to-altheatest4.py` will appear in this repo before August 19th, 3pm PDT.
+Run `python3 altheatest3-to-altheatest4.py altheatest3_genesis_export.json > genesis.json` to make the neccesary changes to the genesis file. `altheatest3-to-altheatest4.py` will appear in this repo before August 19th, 3pm PDT.
 
 Move the genesis file to your .gaiad directory, usually `~/.gaiad/config/genesis.json`.
 
