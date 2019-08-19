@@ -47,7 +47,7 @@ def mint_ualtg_for(accounts, address, amount):
             # If the account exists, add coins
             account['coins'][0]['amount'] = str(int(
                 account['coins'][0]['amount']) + amount)
-            break
+            return None
 
     # If the account does not yet exist, create it
     accounts.append({
