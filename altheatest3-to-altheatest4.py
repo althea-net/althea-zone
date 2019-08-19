@@ -15,6 +15,9 @@ args = parser.parse_args()
 
 genesis = json.loads(args.exported_genesis.read())
 
+# New genesis time
+genesis['genesis_time'] = '2019-08-19T22:00:00Z'
+
 # New chain id
 genesis['chain_id'] = 'altheatest4'
 
@@ -110,6 +113,15 @@ mint_ualtg_for(
 # nuevax
 mint_ualtg_for(
     accounts, 'cosmos170zkcgge9w4vj2zqu2jvx37jlfwr2w8t9hsyy4', 100000000)
+# blockshane
+mint_ualtg_for(
+    accounts, 'cosmos1me6xrxj80cp4smrmy2mwaan67spnsen9s0xtg4', 100000000)
+# UbikCapital
+mint_ualtg_for(
+    accounts, 'cosmos1ymy58lrqvrxwa7mnrtaqfl24dv2c5jm7uyx7y9', 100000000)
+# Figment Networks
+mint_ualtg_for(
+    accounts, 'cosmos15at47see52v0rv70q4xqcxwa6dhw6ecurjj44x', 100000000)
 
 # Add new tokens into not_bonded_tokens
 genesis['app_state']['staking']['pool']['not_bonded_tokens'] = str(int(
