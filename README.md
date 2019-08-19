@@ -87,6 +87,36 @@ Move the genesis file to your .gaiad directory, usually `~/.gaiad/config/genesis
 
 Run `gaiad unsafe-reset-all` and then `gaiad start --p2p.persistent_peers "20d682e14b3bb1f8dbdb0492ea5f401c0c088163@198.245.51.51:26656"` to hopefully start on the new chain!
 
+You can check the state of the consensus with `curl -s localhost:26657/consensus_state`. You should see some JSON that looks something like this:
+
+```
+"round": "0",
+"prevotes": [
+    "nil-Vote",
+    "Vote{1:2B3F7DBECEA4 1/00/1(Prevote) 000000000000 E5158678B215 @ 2019-08-19T22:22:21.144936719Z}",
+    "nil-Vote",
+    "nil-Vote",
+    "Vote{4:3EFFBB4521CE 1/00/1(Prevote) 000000000000 4309AAD1D126 @ 2019-08-19T22:17:37.366381859Z}",
+    "nil-Vote",
+    "nil-Vote",
+    "Vote{7:6F17C91C619F 1/00/1(Prevote) 000000000000 5F56B3A815A6 @ 2019-08-19T22:17:51.138482157Z}",
+    "nil-Vote",
+    "nil-Vote",
+    "nil-Vote",
+    "Vote{11:9870294B556F 1/00/1(Prevote) 000000000000 6FD2B9E6E0FD @ 2019-08-19T22:55:16.097209212Z}",
+    "Vote{12:A558B0B2A57D 1/00/1(Prevote) 000000000000 A966696548AC @ 2019-08-19T22:37:22.966509726Z}",
+    "Vote{13:A797F8942AA6 1/00/1(Prevote) 000000000000 98FBD78DF508 @ 2019-08-19T23:07:00.305851382Z}",
+    "Vote{14:A9677737FED1 1/00/1(Prevote) 000000000000 787BB7BEAAF7 @ 2019-08-19T22:22:20.566826479Z}",
+    "Vote{15:AFA96C4DF538 1/00/1(Prevote) 000000000000 C026F30F08DA @ 2019-08-19T22:17:41.559706657Z}",
+    "nil-Vote",
+    "nil-Vote",
+    "Vote{18:EC5ADABF5803 1/00/1(Prevote) 000000000000 940BFDEE0A4F @ 2019-08-19T22:22:30.693998577Z}",
+    "Vote{19:F8DD3D796B12 1/00/1(Prevote) 000000000000 A0635BF47E46 @ 2019-08-19T23:08:04.191215906Z}"
+],
+```
+
+Once around 14 or 15 of those slots have a vote (like `Vote{13:A797F8942AA6 1/00/1(Prevote)`), the chain should start making blocks!
+
 # General information on running a validator
 
 ## What is a validator?
