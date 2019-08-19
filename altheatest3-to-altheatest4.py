@@ -116,9 +116,6 @@ mint_ualtg_for(
 # blockshane
 mint_ualtg_for(
     accounts, 'cosmos1me6xrxj80cp4smrmy2mwaan67spnsen9s0xtg4', 100000000)
-# UbikCapital
-mint_ualtg_for(
-    accounts, 'cosmos1ymy58lrqvrxwa7mnrtaqfl24dv2c5jm7uyx7y9', 100000000)
 # Figment Networks
 mint_ualtg_for(
     accounts, 'cosmos15at47see52v0rv70q4xqcxwa6dhw6ecurjj44x', 100000000)
