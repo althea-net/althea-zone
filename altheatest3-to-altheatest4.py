@@ -16,7 +16,7 @@ args = parser.parse_args()
 genesis = json.loads(args.exported_genesis.read())
 
 # New genesis time
-genesis['genesis_time'] = '2019-08-19T21:00:00Z'
+genesis['genesis_time'] = '2019-08-19T22:00:00Z'
 
 # New chain id
 genesis['chain_id'] = 'altheatest4'
