@@ -1,4 +1,4 @@
-# Altheatest3 Instructions
+# Altheatest4 Instructions
 
 These instructions will be updated as we move through the process. You can see the current status of the testnet at https://althea.zone
 
