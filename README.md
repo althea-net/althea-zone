@@ -26,7 +26,7 @@ make install
 
 ```
 # generate a key, set a passphrase and backup the keywords
-gaiacli keys add <your key name>
+gaiacli keys add <YOUR_KEY_NAME>
 
 # view your address and pubkey
 gaiacli keys list
@@ -52,9 +52,9 @@ gaiacli tx staking create-validator \
       --commission-max-change-rate="0.01" \
       --min-self-delegation="1" \
       --pubkey=$(gaiad tendermint show-validator) \
-      --moniker=<YOUR MONIKER> \
-      --chain-id="altheatest3" \
-      --from=$(gaiacli keys show <YOUR ACCOUNT NAME> -a)
+      --moniker=<YOUR_MONIKER> \
+      --chain-id="altheatest4" \
+      --from=$(gaiacli keys show <YOUR_KEY_NAME> -a)
 ```
 
 # General information on running a validator
