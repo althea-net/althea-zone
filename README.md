@@ -40,7 +40,7 @@ Reset the state with `gaiad unsafe-reset-all`
 
 Now start your validator with:
 
-`gaiad start --p2p.persistent_peers "20d682e14b3bb1f8dbdb0492ea5f401c0c088163@198.245.51.51:26656"`
+`gaiad start --p2p.persistent_peers "58B5E7269C70C0B336FAEA6DC573B5BB0B539C3B@althea.zone:26656"`
 
 Now add yourself as a validator:
 
